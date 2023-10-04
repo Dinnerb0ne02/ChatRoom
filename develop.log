@@ -1,7 +1,7 @@
 
 --------------ChatRoom-v0.3.1_beta----------------
 
-### 开发于2023/10/03 ###
+### 开发于2023/10/04 ###
 
 开发日志由D1nn3rb0ne撰写
 
@@ -13,6 +13,20 @@ email: tomma_2022@outlook.com
 	使用方法IP=("", ipv4, ipv6)
 	添加了language参数
 	使用方法language=("",en-us ,zh-cn)
+	
+
+###   Developed on October 3, 2023   ###
+
+Development log written by D1nn3rb0ne
+
+Developer: d1nn3rb0ne (D1nn3rb0ne)
+Email: tomma_2022@outlook.com
+
+Main content:
+	Merged ipv4 and ipv6, using IP (Internet Protocol) in cfg to determine
+	Usage IP=("", ipv4, ipv6)
+	Added language parameter
+	Usage method language=("", en-us, zh-cn)
 
 ---------------ChatRoom-v0.3_beta-----------------
 
