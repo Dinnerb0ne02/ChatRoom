@@ -1,0 +1,156 @@
+
+--------------ChatRoom-v0.3.1_beta----------------
+
+### 开发于2023/10/03 ###
+
+开发日志由D1nn3rb0ne撰写
+
+开发人员: d1nn3rb0ne (D1nn3rb0ne)
+email: tomma_2022@outlook.com
+
+主要内容:
+	合并了ipv4和ipv6, 在cfg中使用IP(Internet Protocol)来确定
+	使用方法IP=("", ipv4, ipv6)
+	添加了language参数
+	使用方法language=("",en-us ,zh-cn)
+
+---------------ChatRoom-v0.3_beta-----------------
+
+### 开发于2023/09/23 ###
+
+开发日志由D1nn3rb0ne撰写
+
+开发人员: d1nn3rb0ne (D1nn3rb0ne)
+email: tomma_2022@outlook.com
+
+主要内容:
+	取消了server端的gui, 更新了ipv6
+	仍然使用默认端口45001
+	客户端的输入窗口更大了
+	
+一项说明:
+	本版本实际遇上一个版本没有任何关系, 是从头开发的
+	所以优化了代码
+	ipv4和ipv6的区别:
+		client line 33
+		server line 69
+	
+	
+###   Developed on September 23, 2023   ###
+
+Development log written by D1nn3rb0ne
+
+Developer: d1nn3rb0ne (D1nn3rb0ne)
+
+Email: tomma_2022@outlook.com
+Main content:
+	Canceled server side GUI and updated ipv6
+	Still using default port 45001
+	The input window of the client has become larger
+One note:
+	It doesn't matter if this version actually encounters another version, it was developed from scratch
+	So the code was optimized
+	The difference between ipv4 and ipv6:
+		Client line 33
+		Server line 69
+
+
+
+---------------ChatRoom-v0.2_beta-----------------
+
+### 开发于2023/09/23 ###
+
+开发日志由D1nn3rb0ne撰写
+
+开发人员: d1nn3rb0ne (D1nn3rb0ne)
+email: tomma_2022@outlook.com
+
+主要内容:
+	一些新功能:
+		[+] 新增了ui. 使用标准库周昂的tkinker库
+		[+] 新增了config选项, 使用它来配置基本选项, 如昵称等
+	移除了一写bug:
+		[-] 移除了<return>bug, 进入客户端将不在无故滚屏
+		[-] 移除了输入换行的bug, 收到信息与发送信息不再受阻
+	仍然使用:
+		[=] 默认端口45001
+	特殊功能:
+		[s] 服务端同样使用ui, 所以该版本的服务端无法在linux使用
+		
+	因为使用了gui, 所以没有换行bug
+
+
+###   Developed on September 23, 2023   ###
+
+Development log written by D1nn3rb0ne
+
+Developer: d1nn3rb0ne (D1nn3rb0ne)
+Email: tomma_2022@outlook.com
+
+Main content:
+	Some new features:
+		[+] Added UI Using the standard library Zhou Ang's tkinker library
+		[+] Added the config option to configure basic options 
+		such as nicknames
+	Removed a bug:
+		[-] Removed the<return>bug, entering the client will no longer 
+		cause scrolling
+		[-] Removed the bug of input line wrapping, and receiving 
+		and sending messages are no longer blocked
+	Still using:
+		[=] Default port 45001
+	Special features:
+		[s] The server also uses UI, so this version of the server
+		cannot be used on Linux
+	
+	Due to the use of GUI, there is no line break bug
+
+
+
+---------------ChatRoom-v0.1_beta-----------------
+
+### 开发于2023/09/10 ###
+
+开发日志由D1nn3rb0ne撰写
+
+开发人员: d1nn3rb0ne (D1nn3rb0ne)
+email: tomma_2022@outlook.com
+
+主要内容:
+	ChatRoom 的开端, 使用命令行实现功能. 
+	这是一个不成熟的版本, 有未解决的bug, 并且以后也不会解决, 已经
+	完全摒弃这个版本. server版本虽然更新到v0.1.2, 但仍然有部分bug
+	未解决. 因为解决繁琐, 所以摒弃了这个版本
+	bug列表:
+		无故滚屏, 大量回车, 昵称的滥用, 不成熟的终端显示
+	
+一项说明:
+	如果只是其中一个软件更新到子集, 那么不会单独撰写日志
+	只有所有软件全面更新时才会单独撰写日志 ,例如 0.x -> 0.x.x
+	
+
+###    Developed on September 10, 2023   ###
+
+Development log written by D1nn3rb0ne
+
+Developer: d1nn3rb0ne (D1nn3rb0ne)
+Email: tomma_2022@outlook.com
+
+Main content:
+
+	The beginning of ChatRoom, using the command line to implement
+	functions. This is an immature version with unresolved bugs 
+	that will not be resolved in the future, and it has been 
+	completely abandoned. Although the server version has been 
+	updated to v0.1.2, there are still some bugs that need to be
+	resolved This version was abandoned due to the complexity of 
+	solving it
+
+Bug List:
+	Unreasonable scrolling, large number of carriage returns,
+	abuse of nicknames, immature terminal displays
+
+One note:
+	If only little development is updated to a subset, no separate
+	logs will be written. Only when all software is fully updated 
+	will separate logs be written, such as 0.x ->0.x.x
