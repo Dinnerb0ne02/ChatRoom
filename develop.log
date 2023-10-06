@@ -1,4 +1,29 @@
 
+--------------ChatRoom-v0.3.2_beta----------------
+
+### 开发于2023/10/06 ###
+
+开发日志由D1nn3rb0ne撰写
+
+开发人员: d1nn3rb0ne (D1nn3rb0ne)
+email: tomma_2022@outlook.com
+
+主要内容:
+	修正了v0.3.1_beta的一些bug, 包括ipv4和ipv6的切换失败
+	增加了客户端的报错提示
+
+
+###   Developed on October 6, 2023   ###
+
+Development log written by D1nn3rb0ne
+
+Developer: d1nn3rb0ne (D1nn3rb0ne)
+Email: tomma_2022@outlook.com
+
+Main content:
+	Corrected v0.3.1_ Some bugs in beta, including failed switching between IPv4 and IPv6
+	Added error prompts for the client
+
 --------------ChatRoom-v0.3.1_beta----------------
 
 ### 开发于2023/10/04 ###

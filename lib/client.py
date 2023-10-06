@@ -18,6 +18,13 @@
 
 '''
 
+import socket
+from tkinter import *
+import tkinter.messagebox
+from tkinter.scrolledtext import ScrolledText
+from threading import Thread
+from datetime import datetime
+
 
 class get_config_from_file:
     global lines
@@ -69,5 +76,11 @@ class determine_language:
             send_button = "send"
             return send_button
     
-    
+    def ShowError_ConnectionResetError():
+        if str(get_config_from_file.get_region()) == "zh-cn":
+            tkinter.messagebox.showerror(title='连接重置错误',message='连接重置错误,\n服务器关闭了一个现有的连接')
+        if str(get_config_from_file.get_region()) == "en-us":
+            tkinter.messagebox.showerror(title='ConnectionResetError',message='ConnectionResetError,\nThe server has closed an existing connection')
+            
+        
     

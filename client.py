@@ -21,18 +21,23 @@
 
 import socket
 from tkinter import *
+import tkinter.messagebox
 from tkinter.scrolledtext import ScrolledText
 from threading import Thread
 from datetime import datetime
 from lib.client import get_config_from_file
 from lib.client import determine_language
 
-# Only for ipv6
+
 
 def main(host, port):
     root = Tk()
     root.title(determine_language.main_root_title())
-    client_socket = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
+    
+    if str(get_config_from_file.get_IP()) == "ipv4":
+        client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    if str(get_config_from_file.get_IP()) == "ipv6":
+        client_socket = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
     client_socket.connect((host, port))
     nickname = get_config_from_file.get_nickname()
     chat_box = ScrolledText(root, state=DISABLED)  # 创建 chat_box 全局变量
@@ -60,10 +65,16 @@ def create_ui(root, client_socket, nickname, chat_box):
 def send_message(event, input_entry, client_socket, nickname, chat_box):
     message = input_entry.get()
     if message.strip():
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        formatted_message = f"{timestamp} {nickname}: {message}"
-        append_message(chat_box, formatted_message)  # 使用 chat_box 变量显示消息
-        client_socket.send(formatted_message.encode())
+        try:
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            formatted_message = f"{timestamp} {nickname}: {message}"
+            append_message(chat_box, formatted_message)  # 使用 chat_box 变量显示消息
+            client_socket.send(formatted_message.encode())
+        
+        except ConnectionResetError:
+            determine_language.ShowError_ConnectionResetError()
+
+            
     input_entry.delete(0, END)
     
 def append_message(chat_box, message):
@@ -82,6 +93,7 @@ def receive_messages(client_socket, root):
             message = data.decode()
             append_message(chat_box, message)
         except ConnectionResetError:
+            determine_language.ShowError_ConnectionResetError()
             break
 
         client_socket.close()

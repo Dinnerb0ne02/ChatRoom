@@ -53,7 +53,10 @@ def start_server():
     host = str(get_config_from_file.get_host())
     port = int(get_config_from_file.get_port())
     
-    server_socket = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
+    if str(get_config_from_file.get_IP()) == "ipv4":
+        server_socket = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
+    if str(get_config_from_file.get_IP()) == "ipv6":
+        server_socket = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
     server_socket.bind((host, port))
     server_socket.listen(5)
     determine_language.start_server_print()
